@@ -530,7 +530,7 @@ nav img {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .testimonials .biographies .heading {
@@ -590,7 +590,7 @@ nav img {
 /* testimonials ends */
 /* pricing begins */
 .pricing {
-    padding: 40px;
+    padding: 40px
 }
 
 .pricing h4 {
@@ -608,19 +608,42 @@ nav img {
 
 }
 
+.pricing>p:last-child {
+    text-align: center;
+    font-size: larger;
+    font-weight: 500;
+    color: gray;
+}
+
 .pricing .flex {
     display: flex;
     justify-content: center;
-    gap: 50px;
+
+    align-items: center;
 }
 
 .pricing .flex .first-price,
 .pricing .flex .second-price {
-    padding: 30px;
-    width: 30%;
+
+    width: 20%;
+    height: 60vh;
+    margin: 50px;
     box-shadow: 2px 2px 80px 0 rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pricing .flex .first-price h1,
+.pricing .flex .second-price h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
 }
 
 .pricing .flex .first-price h1 span,
@@ -632,9 +655,70 @@ nav img {
 .pricing .flex .second-price .features li {
     list-style-type: none;
     display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
-.pricing .flex .first-price .features li,
-.pricing .flex .second-price .features li {}
+.pricing .flex .first-price .features li .icon,
+.pricing .flex .second-price .features li .icon {
+    color: #CF711F;
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.pricing .flex .first-price .features li p,
+.pricing .flex .second-price .features li p {
+    margin-left: 20px;
+
+    font-size: 18px;
+}
+
+.pricing .flex .first-price h1+p,
+.pricing .flex .second-price h1+p {
+    color: gray;
+    font-weight: 500;
+}
+
+.pricing .flex .first-price button,
+.pricing .flex .second-price button {
+    display: block;
+    padding: 10px 25px;
+    border: none;
+    background-color: #e88026;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+.pricing .flex .first-price button:hover,
+.pricing .flex .second-price button:hover {
+    background-color: #CF711F;
+}
+
+.pricing .flex .second-price {
+    background-color: #cf711f33;
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing .flex .second-price::after {
+    content: 'the best';
+    width: 180px;
+    height: 30px;
+    position: absolute;
+    top: 35px;
+    right: -35px;
+    background-color: #fbff18;
+    transform: rotate(45deg);
+    display: flex;
+    justify-content: center;
+    color: gray;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 20px;
+
+}
 
 /* pricing ends */
