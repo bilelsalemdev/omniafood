@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+
     <title>Omnifood</title>
 </head>
 
@@ -13,16 +14,21 @@
     <!-- header begins -->
 
     <div class="header">
+
         <nav>
             <img src="content/img/omnifood-logo.png" alt="omnifood-logo">
             <div class="menu">
                 <ul>
-                    <li>How it works test</li>
+                    <li>How it works</li>
                     <li>Meals</li>
                     <li>Testimonials</li>
                     <li>Pricing</li>
                 </ul>
                 <button class="free">Try for free</button>
+            </div>
+            <div onclick="isclick()">
+                <ion-icon name="close-outline" class="cancel"></ion-icon>
+                <ion-icon name="menu-outline" class="burger"></ion-icon>
             </div>
         </nav>
         <section class="header-container">
@@ -30,15 +36,17 @@
                 <h1>A healthy meal delivered to your door, every single day</h1>
                 <p>The smart 365-days-per-year food subscription that will make you eat healthy again. Tailored to your
                     personal tastes and nutritional needs.</p>
-                <button class="free">Start eating well</button>
-                <button class="header-button">
-                    learn more
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="arrow">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
-                    </svg>
-                </button>
+                <div class="buttons">
+                    <button class="free">Start eating well</button>
+                    <button class="header-button">
+                        learn more
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="arrow">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+                        </svg>
+                    </button>
+                </div>
                 <section class="customers">
                     <div class="images">
                         <img src="content/img/customers/customer-4.jpg" alt="customer-1">
@@ -496,6 +504,7 @@
                     </div>
                 </div>
             </form>
+
             <div class="image">
                 <img src="content/img/eating2.jpg" alt="eating">
             </div>
@@ -549,6 +558,8 @@
         <!-- footer ends -->
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script src="app.js"></script>
+
 </body>
 
 </html>
